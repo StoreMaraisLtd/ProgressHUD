@@ -421,6 +421,9 @@ extension ProgressHUD {
 		if (animationType == .sfSymbolBounce)			{ animationSFSymbolBounce(viewAnimation)		}
 		if (animationType == .squareCircuitSnake)		{ animationSquareCircuitSnake(viewAnimation)	}
 		if (animationType == .triangleDotShift)			{ animationTriangleDotShift(viewAnimation)		}
+        
+        if (animationType == .animationLogoSpinFade)    { animationLogoSpinFade(viewAnimation)          }
+        if (animationType == .animationLogoBounce)      { animationLogoBounce(viewAnimation)            }
 	}
 }
 
