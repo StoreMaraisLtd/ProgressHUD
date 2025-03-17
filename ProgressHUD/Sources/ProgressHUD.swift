@@ -294,16 +294,14 @@ extension ProgressHUD {
 		}
         
         let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.firstLineHeadIndent = 15
         paragraphStyle.headIndent = 5
         paragraphStyle.tailIndent = -5
         paragraphStyle.alignment = .center
         
         if let text {
-            let attributedText = NSAttributedString(string: text, attributes: [
+            let attributedText = NSAttributedString(string: "\n\(text)\n", attributes: [
                 .paragraphStyle: paragraphStyle,
             ])
-//            labelStatus?.text = text
             labelStatus?.attributedText = attributedText
         }
         labelStatus?.backgroundColor = labelBackgroundColor
