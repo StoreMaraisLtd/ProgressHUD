@@ -265,10 +265,12 @@ extension ProgressHUD {
 			toolbarHUD?.clipsToBounds = true
 			toolbarHUD?.layer.cornerRadius = 10
 			toolbarHUD?.layer.masksToBounds = true
+            toolbarHUD?.setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
+            toolbarHUD?.setShadowImage(UIImage(), forToolbarPosition: .any)
 			viewBackground?.addSubview(toolbarHUD!)
 		}
 
-		toolbarHUD?.backgroundColor = colorHUD
+        toolbarHUD?.backgroundColor = colorHUD
 	}
 }
 
@@ -423,7 +425,6 @@ extension ProgressHUD {
 		if (animationType == .triangleDotShift)			{ animationTriangleDotShift(viewAnimation)		}
         
         if (animationType == .animationLogoSpinFade)    { animationLogoSpinFade(viewAnimation)          }
-        if (animationType == .animationLogoBounce)      { animationLogoBounce(viewAnimation)            }
 	}
 }
 

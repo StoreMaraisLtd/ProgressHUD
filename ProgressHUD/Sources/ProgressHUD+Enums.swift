@@ -36,7 +36,6 @@ public enum AnimationType: CaseIterable {
 	case squareCircuitSnake
 	case triangleDotShift
     case animationLogoSpinFade
-    case animationLogoBounce
 }
 
 // MARK: - LiveIcon
