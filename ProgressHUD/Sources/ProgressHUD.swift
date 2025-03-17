@@ -40,7 +40,9 @@ public class ProgressHUD: UIView {
 	var viewBackground: UIView?
 	var toolbarHUD: UIToolbar?
 	var labelStatus: UILabel?
-
+    var labelBackgroundColor: UIColor?
+    var labelCornerRadius: CGFloat?
+    
 	var viewProgress: ProgressView?
 	var viewLiveIcon: UIView?
 	var viewStaticImage: UIImageView?
@@ -290,11 +292,26 @@ extension ProgressHUD {
 			labelStatus?.numberOfLines = 0
 			toolbarHUD?.addSubview(labelStatus!)
 		}
-
-		labelStatus?.text = text
-		labelStatus?.font = fontStatus
-		labelStatus?.textColor = colorStatus
-		labelStatus?.isHidden = (text == nil)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+//        paragraphStyle.firstLineHeadIndent = 15
+        paragraphStyle.headIndent = 5
+        paragraphStyle.tailIndent = -5
+        paragraphStyle.alignment = .center
+        
+        if let text {
+            let attributedText = NSAttributedString(string: text, attributes: [
+                .paragraphStyle: paragraphStyle,
+            ])
+//            labelStatus?.text = text
+            labelStatus?.attributedText = attributedText
+        }
+        labelStatus?.backgroundColor = labelBackgroundColor ?? .clear
+        labelStatus?.layer.cornerRadius = labelCornerRadius ?? 0
+        labelStatus?.font = fontStatus
+        labelStatus?.textColor = colorStatus
+        labelStatus?.clipsToBounds = true
+        labelStatus?.isHidden = (text == nil)
 	}
 }
 
