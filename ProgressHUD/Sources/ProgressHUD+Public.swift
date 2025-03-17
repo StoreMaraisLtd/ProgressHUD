@@ -97,6 +97,16 @@ public extension ProgressHUD {
 		get { shared.fontStatus }
 		set { shared.fontStatus = newValue }
 	}
+    
+    class var labelBackgroundColor: UIColor {
+        get { shared.labelBackgroundColor }
+        set { shared.labelBackgroundColor = newValue }
+    }
+    
+    class var labelCornerRadius: CGFloat {
+        get { shared.labelCornerRadius }
+        set { shared.labelCornerRadius = newValue }
+    }
 
 	class var imageSuccess: UIImage {
 		get { shared.imageSuccess }

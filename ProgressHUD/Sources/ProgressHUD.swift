@@ -40,8 +40,8 @@ public class ProgressHUD: UIView {
 	var viewBackground: UIView?
 	var toolbarHUD: UIToolbar?
 	var labelStatus: UILabel?
-    var labelBackgroundColor: UIColor?
-    var labelCornerRadius: CGFloat?
+    var labelBackgroundColor: UIColor = .clear
+    var labelCornerRadius: CGFloat = 0
     
 	var viewProgress: ProgressView?
 	var viewLiveIcon: UIView?
@@ -306,8 +306,8 @@ extension ProgressHUD {
 //            labelStatus?.text = text
             labelStatus?.attributedText = attributedText
         }
-        labelStatus?.backgroundColor = labelBackgroundColor ?? .clear
-        labelStatus?.layer.cornerRadius = labelCornerRadius ?? 0
+        labelStatus?.backgroundColor = labelBackgroundColor
+        labelStatus?.layer.cornerRadius = labelCornerRadius
         labelStatus?.font = fontStatus
         labelStatus?.textColor = colorStatus
         labelStatus?.clipsToBounds = true
