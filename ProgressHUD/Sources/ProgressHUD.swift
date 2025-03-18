@@ -299,7 +299,7 @@ extension ProgressHUD {
         paragraphStyle.alignment = .center
         
         if let text {
-            let attributedText = NSAttributedString(string: "\n\(text)\n", attributes: [
+            let attributedText = NSAttributedString(string: text, attributes: [
                 .paragraphStyle: paragraphStyle,
             ])
             labelStatus?.attributedText = attributedText
@@ -502,8 +502,10 @@ extension ProgressHUD {
 		viewLiveIcon?.center = center
 		viewStaticImage?.center = center
 		viewAnimation?.center = center
-
-		labelStatus?.frame = rect
+        
+        let containerRect: CGRect = .init(x: rect.minX - 10, y: rect.minY - 10,
+                                          width: rect.width + 20, height: rect.height + 20)
+		labelStatus?.frame = containerRect
 	}
 
 	private func rectText(_ text: String) -> CGRect {
