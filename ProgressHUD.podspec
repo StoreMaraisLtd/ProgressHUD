@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.source = { :git => 'https://github.com/relatedcode/ProgressHUD.git', :tag => s.version }
   s.source_files = 'ProgressHUD/Sources/*.swift', 'ProgressHUD/Sources/Animations/*.swift'
-  s.resource_bundles = {'ProgressHUD' => ['ProgressHUD/Sources/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'ProgressHUD' => ['ProgressHUD/Sources/PrivacyInfo.xcprivacy', 'ProgressHUD/Sources/Image/*.pdf']}
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
