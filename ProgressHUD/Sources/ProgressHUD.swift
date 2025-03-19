@@ -575,10 +575,10 @@ extension ProgressHUD {
 		if (alpha == 0) {
 			alpha = 1
 			toolbarHUD?.alpha = 0
-			toolbarHUD?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+//			toolbarHUD?.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
 
 			UIView.animate(withDuration: 0.15, delay: 0, options: [.allowUserInteraction, .curveEaseIn], animations: { [self] in
-				toolbarHUD?.transform = CGAffineTransform(scaleX: 1/1.4, y: 1/1.4)
+//				toolbarHUD?.transform = CGAffineTransform(scaleX: 1/1.4, y: 1/1.4)
 				toolbarHUD?.alpha = 1
 			}, completion: nil)
 		}
