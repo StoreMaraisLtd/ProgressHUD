@@ -15,13 +15,20 @@ extension ProgressHUD {
         let width = view.frame.width
         let height = view.frame.height
         
-        let whiteBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        let bgWidth = width + 30
+        let bgHeight = height + 30
+        
+        let bgGap: CGFloat = -30 / 2
+        
+        let whiteBackgroundView = UIView(frame: CGRect(x: bgGap, y: bgGap, width: bgWidth, height: bgHeight))
         whiteBackgroundView.backgroundColor = .white
-        whiteBackgroundView.layer.cornerRadius = height / 2
+        whiteBackgroundView.layer.cornerRadius = bgHeight / 2
         whiteBackgroundView.clipsToBounds = true
         view.addSubview(whiteBackgroundView)
         
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        let imageGap: CGFloat = 30 / 2
+        
+        let imageView = UIImageView(frame: CGRect(x: imageGap, y: imageGap, width: width, height: height))
         imageView.image = UIImage(named: "LogoUseWithHud")
         imageView.tintColor = colorAnimation
         imageView.contentMode = .scaleAspectFit
