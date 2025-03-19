@@ -16,7 +16,7 @@ extension ProgressHUD {
         let height = view.frame.height
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        imageView.image = UIImage(named: "Logo")
+        imageView.image = UIImage(named: "LogoUseWithHud")
         imageView.tintColor = colorAnimation
         imageView.contentMode = .scaleAspectFit
         
