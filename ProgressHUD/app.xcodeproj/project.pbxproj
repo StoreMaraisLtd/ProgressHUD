@@ -132,7 +132,6 @@
 		299876D9248FCB290025E297 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BF3AE0742D8A4EDC007729B4 /* Image */,
 				29783DC82AD7F7AC0017A142 /* Animations */,
 				298F5A0A2BE4CA2D00656A68 /* PrivacyInfo.xcprivacy */,
 				299876DA248FCB290025E297 /* ProgressHUD.swift */,
@@ -141,6 +140,7 @@
 				29A3BDAE2AC6A5EF0034CAF3 /* ProgressHUD+LiveIcon.swift */,
 				29A3BDB42AC6AF780034CAF3 /* ProgressHUD+Public.swift */,
 				29A3BDAA2AC6A0810034CAF3 /* ProgressView.swift */,
+				BF3AE0772D8A5029007729B4 /* Logo.png */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -174,14 +174,6 @@
 				295B8480248C1C5B003E8AE6 /* ViewController.xib */,
 			);
 			path = app;
-			sourceTree = "<group>";
-		};
-		BF3AE0742D8A4EDC007729B4 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				BF3AE0772D8A5029007729B4 /* Logo.png */,
-			);
-			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
