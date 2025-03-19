@@ -41,9 +41,9 @@
 		29FD93D92AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C52AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift */; };
 		29FD93DA2AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C62AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift */; };
 		29FD93DB2AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FD93C72AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift */; };
-		BF3AE07B2D8A5502007729B4 /* LogoUseWithHud.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BF3AE07A2D8A5502007729B4 /* LogoUseWithHud.pdf */; };
 		BF8D5C372D87D55000D24F41 /* ProgressHUD+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8D5C362D87D55000D24F41 /* ProgressHUD+Custom.swift */; };
 		BFD765062D82B2A700A32378 /* ProgressHUD+LogoSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD765052D82B2A700A32378 /* ProgressHUD+LogoSpin.swift */; };
+		BFFB6A702D8A6D0700C87704 /* LogoUseWithHud.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFB6A6F2D8A6D0700C87704 /* LogoUseWithHud.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,9 +83,9 @@
 		29FD93C52AD9781A0054B585 /* ProgressHUD+HorizontalDotScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+HorizontalDotScaling.swift"; sourceTree = "<group>"; };
 		29FD93C62AD9781A0054B585 /* ProgressHUD+CircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleStrokeSpin.swift"; sourceTree = "<group>"; };
 		29FD93C72AD9781A0054B585 /* ProgressHUD+CircleRippleSingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleRippleSingle.swift"; sourceTree = "<group>"; };
-		BF3AE07A2D8A5502007729B4 /* LogoUseWithHud.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LogoUseWithHud.pdf; sourceTree = "<group>"; };
 		BF8D5C362D87D55000D24F41 /* ProgressHUD+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+Custom.swift"; sourceTree = "<group>"; };
 		BFD765052D82B2A700A32378 /* ProgressHUD+LogoSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+LogoSpin.swift"; sourceTree = "<group>"; };
+		BFFB6A6F2D8A6D0700C87704 /* LogoUseWithHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoUseWithHud.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 		BF3AE0792D8A54F9007729B4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				BF3AE07A2D8A5502007729B4 /* LogoUseWithHud.pdf */,
+				BFFB6A6F2D8A6D0700C87704 /* LogoUseWithHud.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -255,10 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D29F041D9A59E4006CA074 /* LaunchScreen.storyboard in Resources */,
+				BFFB6A702D8A6D0700C87704 /* LogoUseWithHud.png in Resources */,
 				295B8482248C1C5B003E8AE6 /* ViewController.xib in Resources */,
 				298F5A0B2BE4CA2D00656A68 /* PrivacyInfo.xcprivacy in Resources */,
 				29D29F011D9A59E4006CA074 /* Assets.xcassets in Resources */,
-				BF3AE07B2D8A5502007729B4 /* LogoUseWithHud.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

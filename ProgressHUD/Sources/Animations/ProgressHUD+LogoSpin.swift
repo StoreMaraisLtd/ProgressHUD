@@ -15,6 +15,12 @@ extension ProgressHUD {
         let width = view.frame.width
         let height = view.frame.height
         
+        let whiteBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        whiteBackgroundView.backgroundColor = .white
+        whiteBackgroundView.layer.cornerRadius = height / 2
+        whiteBackgroundView.clipsToBounds = true
+        view.addSubview(whiteBackgroundView)
+        
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
         imageView.image = UIImage(named: "LogoUseWithHud")
         imageView.tintColor = colorAnimation
@@ -23,9 +29,9 @@ extension ProgressHUD {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = Double.pi * 2
-        rotationAnimation.duration = 1.5  // 調整旋轉速度x4x
+        rotationAnimation.duration = 1.45 // 調整旋轉速度x4x
         rotationAnimation.repeatCount = .infinity
         imageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
-        view.addSubview(imageView)
+        whiteBackgroundView.addSubview(imageView)
     }
 }
