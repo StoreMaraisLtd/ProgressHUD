@@ -273,7 +273,7 @@ extension ProgressHUD {
             toolbarHUD = renewToolbarHUD
 		}
 
-        toolbarHUD?.backgroundColor = colorHUD
+        toolbarHUD?.backgroundColor = nil // colorHUD
 	}
 }
 

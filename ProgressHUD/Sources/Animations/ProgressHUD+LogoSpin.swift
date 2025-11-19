@@ -24,6 +24,8 @@ extension ProgressHUD {
         whiteBackgroundView.backgroundColor = .white
         whiteBackgroundView.layer.cornerRadius = bgHeight / 2
         whiteBackgroundView.clipsToBounds = true
+        whiteBackgroundView.layer.borderColor = UIColor.init(white: 0.9, alpha: 0.9).cgColor
+        whiteBackgroundView.layer.borderWidth = 0.2
         view.addSubview(whiteBackgroundView)
         
         let imageGap: CGFloat = 30 / 2
