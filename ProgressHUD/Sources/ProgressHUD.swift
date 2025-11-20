@@ -272,8 +272,16 @@ extension ProgressHUD {
 			viewBackground?.addSubview(renewToolbarHUD)
             toolbarHUD = renewToolbarHUD
 		}
-
-        toolbarHUD?.backgroundColor = colorHUD
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UIToolbarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = colorHUD
+            toolbarHUD?.standardAppearance = appearance
+            toolbarHUD?.scrollEdgeAppearance = appearance
+        } else {
+            toolbarHUD?.backgroundColor = colorHUD
+        }
 	}
 }
 
