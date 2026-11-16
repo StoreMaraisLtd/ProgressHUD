@@ -18,10 +18,10 @@ let package = Package(
         .target(
             name: "ProgressHUD",
             dependencies: [],
-            path: "./ProgressHUD",
-            sources: ["Sources"],
+            path: "ProgressHUD/Sources",
+            exclude: ["Image"],
             resources: [
-                .copy("PrivacyInfo.xcprivacy")
+                .process("PrivacyInfo.xcprivacy"),
             ]
         ),
     ]
