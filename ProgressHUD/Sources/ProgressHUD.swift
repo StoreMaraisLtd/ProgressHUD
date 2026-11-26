@@ -59,6 +59,12 @@ public class ProgressHUD: UIView {
 	var colorProgress	= UIColor.lightGray
 	var colorAnimation	= UIColor.lightGray
 
+	// Logo 動畫（animationLogoSpinFade）白色圓底的陰影
+	var logoShadowColor	= UIColor.black
+	var logoShadowOpacity: Float = 0.12
+	var logoShadowRadius: CGFloat = 8
+	var logoShadowOffset	= CGSize(width: 0, height: 2)
+
 	var fontStatus		= UIFont.boldSystemFont(ofSize: 24)
 	var imageSuccess	= UIImage.checkmark.withTintColor(UIColor.systemGreen, renderingMode: .alwaysOriginal)
 	var imageError		= UIImage.remove.withTintColor(UIColor.systemRed, renderingMode: .alwaysOriginal)

@@ -40,6 +40,33 @@ public extension ProgressHUD {
 	}
 }
 
+// MARK: - Logo shadow customization
+/// `animationLogoSpinFade` 白色圓底的陰影。下次呼叫 `animate(...)` 時生效。
+/// 注意：HUD 四周只留約 15pt（marginSize 30 - 圓底外擴 15），shadowRadius + |offset| 超過此值會被 HUD 邊界裁掉。
+public extension ProgressHUD {
+
+	class var logoShadowColor: UIColor {
+		get { shared.logoShadowColor }
+		set { shared.logoShadowColor = newValue }
+	}
+
+	/// 0 = 無陰影
+	class var logoShadowOpacity: Float {
+		get { shared.logoShadowOpacity }
+		set { shared.logoShadowOpacity = newValue }
+	}
+
+	class var logoShadowRadius: CGFloat {
+		get { shared.logoShadowRadius }
+		set { shared.logoShadowRadius = newValue }
+	}
+
+	class var logoShadowOffset: CGSize {
+		get { shared.logoShadowOffset }
+		set { shared.logoShadowOffset = newValue }
+	}
+}
+
 // MARK: - HUD customization
 public extension ProgressHUD {
 
