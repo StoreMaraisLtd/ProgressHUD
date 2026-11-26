@@ -23,7 +23,13 @@ extension ProgressHUD {
         let whiteBackgroundView = UIView(frame: CGRect(x: bgGap, y: bgGap, width: bgWidth, height: bgHeight))
         whiteBackgroundView.backgroundColor = .white
         whiteBackgroundView.layer.cornerRadius = bgHeight / 2
-        whiteBackgroundView.clipsToBounds = true
+        // 陰影：不可 clipsToBounds（會把陰影裁掉）；Logo 本身在圓內，不需要裁切。
+        // 指定 shadowPath 讓系統不必每幀依內容計算陰影形狀（Logo 持續旋轉，效能較好）
+        whiteBackgroundView.layer.shadowColor = UIColor.black.cgColor
+        whiteBackgroundView.layer.shadowOpacity = 0.12
+        whiteBackgroundView.layer.shadowRadius = 8
+        whiteBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        whiteBackgroundView.layer.shadowPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: bgWidth, height: bgHeight)).cgPath
         whiteBackgroundView.layer.borderColor = UIColor.init(white: 0.9, alpha: 0.9).cgColor
         whiteBackgroundView.layer.borderWidth = 0.2
         view.addSubview(whiteBackgroundView)

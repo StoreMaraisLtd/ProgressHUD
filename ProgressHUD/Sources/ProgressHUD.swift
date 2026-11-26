@@ -38,7 +38,9 @@ public class ProgressHUD: UIView {
 	var marginSize: CGFloat = 30
 
 	var viewBackground: UIView?
-	var toolbarHUD: UIToolbar?
+	/// HUD 底板。原本是 `UIToolbar`，iOS 26 起 toolbar 會套 Liquid Glass 外觀，
+	/// 即使背景設 .clear 仍會多出系統陰影，因此改用一般 UIView（我們本來就只用透明／純色背景，不需要 toolbar 的模糊）。
+	var toolbarHUD: UIView?
 	var labelStatus: UILabel?
     var labelBackgroundColor: UIColor = .clear
     var labelCornerRadius: CGFloat = 0
@@ -262,26 +264,14 @@ extension ProgressHUD {
 
 	private func setupToolbar() {
 		if (toolbarHUD == nil) {
-			let renewToolbarHUD = UIToolbar(frame: CGRect.zero)
-            renewToolbarHUD.isTranslucent = true
-            renewToolbarHUD.clipsToBounds = true
-            renewToolbarHUD.layer.cornerRadius = 10
-            renewToolbarHUD.layer.masksToBounds = true
-            renewToolbarHUD.setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
-            renewToolbarHUD.setShadowImage(UIImage(), forToolbarPosition: .any)
+			let renewToolbarHUD = UIView(frame: CGRect.zero)
+			renewToolbarHUD.clipsToBounds = true
+			renewToolbarHUD.layer.cornerRadius = 10
+			renewToolbarHUD.layer.masksToBounds = true
 			viewBackground?.addSubview(renewToolbarHUD)
-            toolbarHUD = renewToolbarHUD
+			toolbarHUD = renewToolbarHUD
 		}
-        
-        if #available(iOS 15.0, *) {
-            let appearance = UIToolbarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = colorHUD
-            toolbarHUD?.standardAppearance = appearance
-            toolbarHUD?.scrollEdgeAppearance = appearance
-        } else {
-            toolbarHUD?.backgroundColor = colorHUD
-        }
+		toolbarHUD?.backgroundColor = colorHUD
 	}
 }
 
